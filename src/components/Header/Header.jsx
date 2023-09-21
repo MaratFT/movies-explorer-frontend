@@ -67,33 +67,6 @@ function Header({ loggedIn }) {
           </NavLink>
         </nav>
       )}
-      {/* <nav className="header__navbar">
-        {location.pathname === '/' && !loggedIn ? (
-          <>
-            <NavLink className="header__link header__link_auth" to="/signup">
-              Регистрация
-            </NavLink>
-            <Link to="/signin">
-              <button className="header__button-signin">Войти</button>
-            </Link>
-          </>
-        ) : (
-          <>
-            <NavLink className="header__link" to="/movies">
-              Фильмы
-            </NavLink>
-            <NavLink className="header__link" to="/saved-movies">
-              Сохранённые фильмы
-            </NavLink>
-            <NavLink className="header__link" to="/profile">
-              Аккаунт
-              <div className={headerIconBackgroundClassName}>
-                <img className="header__icon" src={accountIcon} alt="Значок аккаунта" />
-              </div>
-            </NavLink>
-          </>
-        )}
-      </nav> */}
     </header>
   );
 }

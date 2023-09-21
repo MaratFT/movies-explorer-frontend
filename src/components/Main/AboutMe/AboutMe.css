@@ -66,9 +66,9 @@
 }
 
 .about-me__photo {
-  /* object-fit: cover; */
-  max-width: 270px;
-  max-height: 327px;
+  object-fit: cover;
+  width: 270px;
+  height: 327px;
   border-radius: 10px;
 }
 
@@ -98,8 +98,8 @@
   }
 
   .about-me__photo {
-    max-width: 255px;
-    max-height: 307px;
+    width: 255px;
+    height: 307px;
   }
 }
 
@@ -122,9 +122,8 @@
   }
 
   .about-me__photo {
-    max-width: 292px;
-    max-height: 352px;
-    object-fit: cover;
+    width: 292px;
+    height: 352px;
   }
 
   .about-me__text {
