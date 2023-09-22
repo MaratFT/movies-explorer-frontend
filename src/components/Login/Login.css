@@ -1,0 +1,157 @@
+.login {
+  padding: 70px 442px;
+  min-height: 700px;
+  box-sizing: border-box;
+}
+
+.login__header {
+  margin-bottom: 40px;
+}
+
+.login__logo-link {
+  display: block;
+  width: 38px;
+  height: 38px;
+}
+
+.login__logo-link:hover {
+  opacity: 70%;
+}
+
+.login__logo {
+  display: block;
+}
+
+.login__title {
+  margin: 0;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.21;
+  color: #ffffff;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__label {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #8b8b8b;
+  margin-bottom: 24px;
+}
+
+.login__label:last-of-type {
+  margin: 0;
+}
+
+.login__input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #424242;
+  padding: 5px 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.login__input:focus {
+  outline: none;
+  border-bottom: 1px solid #4285f4;
+}
+
+.login__error {
+  margin: 0;
+  min-height: 25px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ee3465;
+}
+
+.login__button {
+  margin-top: 190px;
+  border: none;
+  background-color: #4285f4;
+  border-radius: 3px;
+  width: 396px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login__button:hover {
+  opacity: 80%;
+}
+
+.login__text {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #8b8b8b;
+  text-align: center;
+}
+
+.login__text-link {
+  color: #4285f4;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.login__text-link:hover {
+  opacity: 70%;
+}
+
+@media screen and (max-width: 1279px) {
+  .login {
+    min-height: 1024px;
+    padding: 232px 186px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login {
+    min-height: 780px;
+    padding: 56px 30px 30px;
+  }
+
+  .login__header {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login__title {
+    margin-top: 50px;
+  }
+
+  .login__button {
+    margin-top: 278px;
+    width: 260px;
+    font-size: 12px;
+  }
+
+  .login__text {
+    margin-top: 14px;
+    font-size: 12px;
+  }
+
+  .login__text-link {
+    margin-left: 7px;
+  }
+}

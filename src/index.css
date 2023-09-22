@@ -1,0 +1,10 @@
+.page {
+  background-color: #202020;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);

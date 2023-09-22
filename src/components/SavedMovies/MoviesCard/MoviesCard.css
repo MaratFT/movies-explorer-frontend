@@ -1,0 +1,22 @@
+.movies-card__button-delete {
+  background-color: #313131;
+  background-image: url(../../../images/card-button-delete.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 29px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.movies-card__button-delete:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  .movies-card__button-delete {
+    margin-top: 14px;
+  }
+}
