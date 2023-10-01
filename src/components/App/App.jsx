@@ -52,7 +52,7 @@ function App() {
         }
         navigate(location.pathname);
         setLoggedIn(true);
-        return console.log(verified);
+        return;
       } catch (error) {
         setLoggedIn(false);
         console.error(error);
