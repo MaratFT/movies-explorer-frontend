@@ -1,17 +1,34 @@
+import React from 'react';
+
 import './SearchForm.css';
 
 import FilterCheckbox from './FilterCheckbox/FilterCheckbox';
 
-function SearchForm() {
+function SearchForm({
+  toggleShortMovies,
+  onSubmit,
+  onChange,
+  inputValue,
+  onChangeCheckbox,
+  inputError
+}) {
   return (
     <div className="search-form">
-      <form action="" className="search-form__form" id="search-form">
-        <input type="search" placeholder="Фильм" required className="search-form__form-input" />
+      <form noValidate className="search-form__form" id="search-form" onSubmit={onSubmit}>
+        <input
+          type="search"
+          placeholder="Фильм"
+          required
+          className="search-form__form-input"
+          onChange={onChange}
+          value={inputValue || ''}
+        />
         <button type="submit" className="search-form__form-button">
           Поиск
         </button>
       </form>
-      <FilterCheckbox />
+      <p className="search-form__error-message">{inputError}</p>
+      <FilterCheckbox onChange={onChangeCheckbox} checked={toggleShortMovies} />
     </div>
   );
 }
