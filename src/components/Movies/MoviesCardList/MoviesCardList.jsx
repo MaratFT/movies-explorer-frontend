@@ -56,8 +56,13 @@ function MoviesCardList({
               lowerCaseNameRU.includes(lowerCaseQuery) || lowerCaseNameEN.includes(lowerCaseQuery)
             );
           });
+          setVisibleCards768(8);
+          setVisibleCards320(5);
+          setVisibleCards(12);
+
           setIsLoading(false);
           setSearchResults(filteredMovies);
+
           return;
         }
       } catch (error) {
@@ -81,7 +86,7 @@ function MoviesCardList({
       setVisibleCards(prev => prev - (visibleCards - visibleCards768) + loadCount);
     } else {
       setVisibleCards(prev => prev + loadCount);
-      setVisibleCards320(prev => prev + (visibleCards768 - prev) + loadCount);
+      setVisibleCards320(prev => prev + (visibleCards - prev) + loadCount);
       setVisibleCards768(prev => prev + (visibleCards - prev) + loadCount);
     }
     setAddClickVisibleCards(true);
