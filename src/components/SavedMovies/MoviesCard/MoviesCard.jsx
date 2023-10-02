@@ -1,35 +1,44 @@
+import React from 'react';
+
 import './MoviesCard.css';
 
-import photo from '../../../images/photo-movies/pic__COLOR_pic.jpg';
-import photo1 from '../../../images/photo-movies/pic__COLOR_pic-1.jpg';
-import photo2 from '../../../images/photo-movies/pic__COLOR_pic-2.jpg';
+import { deleteUserCurrentMovie } from '../../../utils/MainApi';
 
-function MoviesCard() {
+const formatDuration = duration => {
+  const hours = Math.floor(duration / 60);
+  const minutes = duration % 60;
+
+  return `${hours}ч ${minutes}м`;
+};
+
+function MoviesCard({ movie, setSearchResults, allSavedMovies, setAllSavedMovies }) {
+  async function delUserCurrentMovie() {
+    try {
+      await deleteUserCurrentMovie(movie._id);
+      setSearchResults(state => state.filter(c => c._id !== movie._id));
+      setAllSavedMovies(allSavedMovies.filter(m => m._id !== movie._id));
+      return;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <>
       <article className="movies-card">
         <div className="movies-card__text">
-          <h2 className="movies-card__title">В погоне за Бенкси</h2>
-          <p className="movies-card__duration">0ч 42м</p>
+          <h2 className="movies-card__title">{movie.nameRU}</h2>
+          <p className="movies-card__duration">{formatDuration(movie.duration)}</p>
         </div>
-        <img className="movies-card__photo" src={photo} alt="Кадр фильма" />
-        <button className="movies-card__button-delete"></button>
-      </article>
-      <article className="movies-card">
-        <div className="movies-card__text">
-          <h2 className="movies-card__title">В погоне за Бенкси</h2>
-          <p className="movies-card__duration">0ч 42м</p>
-        </div>
-        <img className="movies-card__photo" src={photo1} alt="Кадр фильма" />
-        <button className="movies-card__button-delete"></button>
-      </article>
-      <article className="movies-card">
-        <div className="movies-card__text">
-          <h2 className="movies-card__title">В погоне за Бенкси</h2>
-          <p className="movies-card__duration">0ч 42м</p>
-        </div>
-        <img className="movies-card__photo" src={photo2} alt="Кадр фильма" />
-        <button className="movies-card__button-delete"></button>
+        <a
+          className="movies-card__photo-link"
+          href={movie.trailerLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="movies-card__photo" src={`${movie.image}`} alt="Кадр фильма" />
+        </a>
+        <button className="movies-card__button-delete" onClick={delUserCurrentMovie}></button>
       </article>
     </>
   );

@@ -1,6 +1,6 @@
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
+function FilterCheckbox({ onChange, checked }) {
   return (
     <label className="filter-checkbox" htmlFor="short-films">
       <input
@@ -9,6 +9,8 @@ function FilterCheckbox() {
         id="short-films"
         name="short-films"
         form="search-form"
+        onChange={onChange}
+        checked={checked}
       />
       <span className="filter-checkbox__label-text">Короткометражки</span>
     </label>

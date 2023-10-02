@@ -38,6 +38,10 @@
   display: block;
 }
 
+.movies-card__photo-link {
+  display: block;
+}
+
 .movies-card__button-active {
   background-color: #ee3465;
   background-image: url(../../../images/check-mark.svg);

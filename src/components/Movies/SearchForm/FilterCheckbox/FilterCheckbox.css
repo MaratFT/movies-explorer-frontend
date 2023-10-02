@@ -1,12 +1,7 @@
-/* .filter-checkbox {
-  display: flex;
-  align-items: center;
-  margin-top: 26px;
-} */
-
 .filter-checkbox {
   display: inline-block;
-  margin-top: 26px;
+  /* margin-top: 26px; */
+  margin-top: 8px;
 }
 
 .filter-checkbox__label-input {
