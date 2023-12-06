@@ -1,7 +1,7 @@
 # Проект Movies Explorer фронтенд
 
 _Описание:_
-Frontend-end часть проекта Movies Explorer. В проекте используется JavaScript, React, CSS, HTML
+Frontend-end часть проекта Movies Explorer, в котором можно искать трейлеры фильмов и добавлять их к себе в коллекцию. В проекте используется JavaScript, React, CSS, HTML
 
 ## Директории
 
@@ -10,11 +10,12 @@ Frontend-end часть проекта Movies Explorer. В проекте исп
 
 ## Запуск проекта
 
-`npm run start` — запускает проект
+  1. Установить зависимости командой _npm i_
+  2. `npm run start` — запускает проект
 
 Адрес репозитория: https://github.com/MaratFT/movies-explorer-frontend
 
-Ссылка на Pull request: https://github.com/MaratFT/movies-explorer-frontend/pull/2
+Ссылка на Pull request: https://github.com/MaratFT/movies-explorer-frontend
 
 ## Макет проекта
 
